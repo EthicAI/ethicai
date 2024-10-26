@@ -1,5 +1,7 @@
 "use client";
 import React from 'react';
+import { marked } from 'marked';
+
 
 export const CustomButton = ({ onClick, children }) => (
   <button
@@ -27,11 +29,11 @@ export const MainContainer = ({ children }) => (
   </div>
 );
 
-export const MessageBox = ({ message }) => (
-  <div className="bg-[#3a3a1d] border border-[#F5A524] rounded-xl p-4 text-[#e1a917] mb-3 max-w-3xl mx-auto">
-    <p>{message}</p>
-  </div>
-);
+export const MessageBox = ({ message }) => {
+  const html = marked(message);
+  return <div className="bg-[#3a3a1d] border border-[#F5A524] rounded-xl p-4 text-[#e1a917] mb-3 max-w-3xl mx-auto"
+  dangerouslySetInnerHTML={{ __html: html }} />
+};
 
 export const InputContainer = ({ children }) => (
   <div className="sticky bottom-0 p-5 flex justify-center">
