@@ -10,7 +10,10 @@ export default function InputChat() {
 
   const buscarResposta = () => {
     addConversa(pergunta);
-    enviarPergunta(pergunta);
+    enviarPergunta(pergunta, (resposta) => {
+      addConversa(resposta);
+    });
+    setPergunta("");
   };
 
   return (
@@ -19,7 +22,7 @@ export default function InputChat() {
         type="text"
         value={pergunta}
         onChange={(e) => setPergunta(e.target.value)}
-        placeholder="Lorem Ipsum is simply dummy text of the printing..."
+        placeholder="Coloque aqui a sua pergunta"
         className="flex-grow p-3 bg-[#3a3a1d] text-[#e1a917] placeholder-[#e1a917] rounded-full border-none focus:outline-none"
       />
       <button
