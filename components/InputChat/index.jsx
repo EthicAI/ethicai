@@ -1,6 +1,7 @@
 "use client";
-import { useDados } from "@/context/DadosContext";
-import { enviarPergunta } from "@/requests/UtilTransformers";
+
+import { useDados } from "@/contexts/DadosContext";
+import { enviarPergunta } from "@/util/requests/UtilTransformers";
 import { ArrowUpIcon } from "@radix-ui/react-icons";
 import { useState } from "react";
 
@@ -10,9 +11,11 @@ export default function InputChat() {
 
   const buscarResposta = () => {
     addConversa(pergunta);
+
     enviarPergunta(pergunta, (resposta) => {
       addConversa(resposta);
     });
+
     setPergunta("");
   };
 
