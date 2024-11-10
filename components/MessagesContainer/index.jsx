@@ -8,7 +8,7 @@ export default function MessagesContainer() {
   const messagesEndRef = useRef(null);
 
   const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+    messagesEndRef.current?.scroll({ top: messagesEndRef.current.scrollHeight, behavior: "smooth" });
   };
 
   useEffect(() => {
@@ -16,11 +16,10 @@ export default function MessagesContainer() {
   }, [messages]);
 
   return (
-    <div className="flex-grow p-5 overflow-y-auto">
+    <div className="flex-grow p-5 overflow-y-auto" ref={messagesEndRef}>
       {messages.map((message, index) => (
         <MessageBox key={index} message={message} />
       ))}
-      <div ref={messagesEndRef} />
     </div>
   );
 }
