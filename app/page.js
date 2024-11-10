@@ -1,107 +1,78 @@
-import TestTransformersJs from "@/components/TestTransformersJs";
-import Image from "next/image";
+import Link from "next/link"
+import { Button } from "@/components/ui/button"
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
 
-export default function Home() {
+export default function EticaLandingPage() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <TestTransformersJs />
-
-
-      ESSA EH A ROTA DA LANDING PAGE
-
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="min-h-screen bg-background font-sans">
+      <header className="bg-primary text-primary-foreground py-6">
+        <div className="container mx-auto px-4">
+          <h1 className="text-3xl font-bold">A Importância da Ética</h1>
         </div>
+      </header>
+
+      <main className="container mx-auto px-4 py-8 space-y-12">
+        <section>
+          <h2 className="text-2xl font-semibold mb-4">Por que a Ética é Essencial em Nossas Vidas?</h2>
+          <p className="text-muted-foreground">
+            A ética é a base de toda convivência saudável e justa. No trabalho, na escola, nas relações pessoais e nos negócios, agir de forma ética significa respeitar o próximo, ser transparente e fazer escolhas que promovam o bem-estar de todos. Em um mundo cada vez mais interconectado, a ética se torna um guia essencial para construir confiança, gerar impacto positivo e criar um ambiente onde todos possam prosperar.
+          </p>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-semibold mb-4">Benefícios de Agir com Ética no Dia a Dia</h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            <Card>
+              <CardHeader>
+                <CardTitle>Fortalece as Relações</CardTitle>
+              </CardHeader>
+              <CardContent>
+                Atitudes éticas promovem confiança e respeito, criando vínculos mais sólidos e duradouros, seja com clientes, colegas ou parceiros.
+              </CardContent>
+            </Card>
+            <Card>
+              <CardHeader>
+                <CardTitle>Contribui para o Crescimento</CardTitle>
+              </CardHeader>
+              <CardContent>
+                Profissionais que valorizam a ética em suas ações são mais reconhecidos, alcançam melhores oportunidades e constroem uma reputação sólida e respeitável.
+              </CardContent>
+            </Card>
+            <Card>
+              <CardHeader>
+                <CardTitle>Aumenta a Confiança</CardTitle>
+              </CardHeader>
+              <CardContent>
+                Em um ambiente onde a ética é valorizada, as pessoas se sentem seguras para se expressar, colaborar e contribuir, o que resulta em uma melhor produtividade e satisfação geral.
+              </CardContent>
+            </Card>
+            <Card>
+              <CardHeader>
+                <CardTitle>Cria um Mundo Melhor</CardTitle>
+              </CardHeader>
+              <CardContent>
+                Agir com ética vai além dos interesses individuais – contribui para uma sociedade mais justa, equitativa e pacífica. Pequenas atitudes éticas no dia a dia têm o poder de transformar a sociedade como um todo.
+              </CardContent>
+            </Card>
+          </div>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-semibold mb-4">Comece Agora: Faça da Ética um Valor Pessoal e Profissional</h2>
+          <p className="text-muted-foreground mb-6">
+            Agir com ética no dia a dia é uma escolha que transforma vidas e impacta positivamente o ambiente ao nosso redor. Seja você um estudante, profissional, empresário ou cidadão, a ética é um guia poderoso para construir um futuro melhor. Vamos juntos promover a ética em todas as nossas ações e inspirar os outros a fazerem o mesmo!
+          </p>
+          <Link href="/chat" passHref>
+            <Button size="lg">Chat</Button>
+          </Link>
+        </section>
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+
+      <footer className="bg-muted py-6 mt-12">
+        <div className="container mx-auto px-4 text-center text-muted-foreground">
+          <p>&copy; 2024 Ética em Ação. Todos os direitos reservados.</p>
+        </div>
       </footer>
     </div>
-  );
+  )
 }
