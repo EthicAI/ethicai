@@ -20,6 +20,16 @@ export default function EticaLandingPage() {
         </section>
 
         <section>
+          <h2 className="text-2xl font-semibold mb-4">Comece Agora: Faça da Ética um Valor Pessoal e Profissional</h2>
+          <p className="text-muted-foreground mb-6">
+            Clique no botão abaixo para abrir um chat onde você pode perguntar qualquer coisa! O assistente irá responder de maneira ética, orientando você sobre como realizar tarefas ou responder questionamentos com base em princípios de respeito, honestidade e responsabilidade. Agir com ética no dia a dia é fundamental para transformar vidas e criar um ambiente positivo ao nosso redor. Vamos juntos promover a ética em todas as nossas ações!
+          </p>          
+          <Link href="/chat" passHref>
+            <Button size="lg">Chat</Button>
+          </Link>
+        </section>        
+
+        <section>
           <h2 className="text-2xl font-semibold mb-4">Benefícios de Agir com Ética no Dia a Dia</h2>
           <div className="grid md:grid-cols-2 gap-6">
             <Card>
@@ -55,16 +65,6 @@ export default function EticaLandingPage() {
               </CardContent>
             </Card>
           </div>
-        </section>
-
-        <section>
-          <h2 className="text-2xl font-semibold mb-4">Comece Agora: Faça da Ética um Valor Pessoal e Profissional</h2>
-          <p className="text-muted-foreground mb-6">
-            Agir com ética no dia a dia é uma escolha que transforma vidas e impacta positivamente o ambiente ao nosso redor. Seja você um estudante, profissional, empresário ou cidadão, a ética é um guia poderoso para construir um futuro melhor. Vamos juntos promover a ética em todas as nossas ações e inspirar os outros a fazerem o mesmo!
-          </p>
-          <Link href="/chat" passHref>
-            <Button size="lg">Chat</Button>
-          </Link>
         </section>
       </main>
 
