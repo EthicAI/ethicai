@@ -10,6 +10,7 @@ export default function Home() {
     <DadosProvider>
       <MainContainer>
         <MessagesContainer />
+        
         <InputContainer>
           <InputChat />
         </InputContainer>
