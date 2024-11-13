@@ -3,6 +3,10 @@
 import { createContext, useContext, useReducer } from "react";
 import { ActionList, listReducer } from "@/util/listUtils";
 
+export const TIPO_CONVERSA = {
+  PERGUNTA: "pergunta",
+  RESPOSTA: "resposta",
+}
 
 export const DadosProviderContext = createContext({
   conversa: [],

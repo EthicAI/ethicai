@@ -8,7 +8,7 @@ export default function MessagesContainer() {
   return (
     <div className="flex-grow p-5 overflow-y-auto">
       {messages.map((message, index) => (
-        <MessageBox key={index} message={message} />
+        <MessageBox key={index} message={message.msg} tipo={message.tipo} />
       ))}
     </div>
   );
