@@ -37,8 +37,11 @@ export default function InputChat() {
   };
 
   return (
-    <form onSubmit={buscarResposta}>
-      <Card className="flex items-center p-2 w-full max-w-3xl border">
+    <form
+      onSubmit={buscarResposta}
+      className="flex w-full items-center max-w-3xl"
+    >
+      <Card className="flex items-center p-2 w-full">
         <Input
           type="text"
           value={pergunta}
@@ -55,7 +58,11 @@ export default function InputChat() {
           <ArrowUpIcon />
         </Button>
         {gerouResposta && (
-          <Button onClick={regerarResposta}>
+          <Button
+            onClick={regerarResposta}
+            className={"ml-3"}
+            variant="outline"
+          >
             <ReloadIcon />
           </Button>
         )}

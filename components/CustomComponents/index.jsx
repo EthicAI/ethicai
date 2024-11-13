@@ -15,7 +15,7 @@ export const MessageBox = ({ message, tipo }) => {
 
   return (
     <Card
-      className={cn("border rounded-xl p-4 mb-3 max-w-3xl mx-auto")}
+      className={cn("border rounded-xl p-4 mb-3 w-full")}
       dangerouslySetInnerHTML={{ __html: html }}
     />
   );
