@@ -11,7 +11,6 @@ export function listReducer(state = [], action = { type: "", item: any }) {
       return [...state, action.item];
     case ActionList.REMOVE_ITEM:
       return state.filter((i) => i !== action.item);
-
     default:
       return state;
   }

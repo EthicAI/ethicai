@@ -1,8 +1,8 @@
 "use client";
+
 import React from 'react';
 import { marked } from 'marked';
 import { TIPO_CONVERSA } from '@/contexts/DadosContext';
-
 
 export const CustomButton = ({ onClick, children }) => (
   <button
@@ -23,7 +23,6 @@ export const CustomTextField = ({ value, onChange, placeholder }) => (
   />
 );
 
-
 export const MainContainer = ({ children }) => (
   <div className="flex flex-col h-screen">
     {children}
@@ -37,7 +36,7 @@ export const MessageBox = ({ message, tipo }) => {
   return (
     <div className={classes}
       dangerouslySetInnerHTML={{ __html: html }} />
-);
+  );
 };
 
 export const InputContainer = ({ children }) => (
@@ -45,5 +44,3 @@ export const InputContainer = ({ children }) => (
     {children}
   </div>
 );
-
-
