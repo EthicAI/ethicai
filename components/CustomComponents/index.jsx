@@ -8,8 +8,10 @@ export const MainContainer = ({ children }) => (
   <div className={cn("flex flex-col h-screen")}>{children}</div>
 );
 
-export const MessageBox = ({ message }) => {
+export const MessageBox = ({ message, tipo }) => {
   const html = marked(message);
+
+  // classes += tipo == TIPO_CONVERSA.PERGUNTA ? " bg-[#3a3a1d] setaBalaoPergunta" : " bg-[#1D3A39] setaBalaoResposta";
 
   return (
     <Card
