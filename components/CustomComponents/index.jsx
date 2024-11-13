@@ -1,7 +1,8 @@
 "use client";
+
 import React from 'react';
 import { marked } from 'marked';
-
+import { TIPO_CONVERSA } from '@/contexts/DadosContext';
 
 export const CustomButton = ({ onClick, children }) => (
   <button
@@ -22,17 +23,20 @@ export const CustomTextField = ({ value, onChange, placeholder }) => (
   />
 );
 
-
 export const MainContainer = ({ children }) => (
   <div className="flex flex-col h-screen">
     {children}
   </div>
 );
 
-export const MessageBox = ({ message }) => {
+export const MessageBox = ({ message, tipo }) => {
   const html = marked(message);
-  return <div className="bg-[#3a3a1d] border border-[#F5A524] rounded-xl p-4 text-[#e1a917] mb-3 max-w-3xl mx-auto"
-  dangerouslySetInnerHTML={{ __html: html }} />
+  let classes = ` border border-[#F5A524] rounded-xl p-4 text-[#e1a917] mb-3 max-w-3xl mx-auto`;
+  classes += tipo == TIPO_CONVERSA.PERGUNTA ? " bg-[#3a3a1d] setaBalaoPergunta" : " bg-[#1D3A39] setaBalaoResposta";
+  return (
+    <div className={classes}
+      dangerouslySetInnerHTML={{ __html: html }} />
+  );
 };
 
 export const InputContainer = ({ children }) => (
@@ -40,5 +44,3 @@ export const InputContainer = ({ children }) => (
     {children}
   </div>
 );
-
-
