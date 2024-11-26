@@ -1,6 +1,4 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  serverComponentsExternalPackages: ["sharp", "onnxruntime-node"],
-};
+const nextConfig = {};
 
 export default nextConfig;
