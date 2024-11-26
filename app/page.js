@@ -1,18 +1,18 @@
-"use client"; // Ensure this is the correct directive for your setup  
+"use client";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Modal } from "@/components/ui/modal";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-import React, { useState } from 'react'; // Make sure to import useState  
+import React, { useState } from 'react';
 
 export default function EticaLandingPage() {
-  const [modalOpen, setModalOpen] = useState(false); // State to control modal visibility  
+  const [modalOpen, setModalOpen] = useState(false);
 
   const handleChatClick = (e) => {
     const acceptTerms = localStorage.getItem('termsAccepted');
     if (!acceptTerms) {
       e.preventDefault();
-      setModalOpen(true); // Open modal when clicking the button if acceptTerms is not set }
+      setModalOpen(true);
     }
   };
 
@@ -37,9 +37,9 @@ export default function EticaLandingPage() {
           <p className="text-muted-foreground mb-6">
             Clique no botão abaixo para abrir um chat onde você pode perguntar qualquer coisa! O assistente irá responder de maneira ética, orientando você sobre como realizar tarefas ou responder questionamentos com base em princípios de respeito, honestidade e responsabilidade. Agir com ética no dia a dia é fundamental para transformar vidas e criar um ambiente positivo ao nosso redor. Vamos juntos promover a ética em todas as nossas ações!
           </p>
-          <Link href="/chat" passHref>   
+          <Link href="/chat" passHref>
               <Button size="lg" onClick={handleChatClick}>Chat</Button>
-          </Link>  
+          </Link>
         </section>
 
         <section>
@@ -84,10 +84,10 @@ export default function EticaLandingPage() {
       {/* Modal */}
       <Modal
         isOpen={modalOpen}
-        onClose={() => setModalOpen(false)} // Close modal  
+        onClose={() => setModalOpen(false)}
         title="Termos de Uso do Sistema"
       >
-        Ao utilizar esta inteligência artificial generativa, você aceita os seguintes termos: compromete-se a usar a IA de forma ética e responsável, evitando qualquer conteúdo que seja ofensivo, ilegal ou prejudicial a terceiros. O conteúdo gerado é de sua responsabilidade, e você deve garantir que não infringe direitos autorais ou outras leis de propriedade intelectual. Embora a IA forneça informações e respostas úteis, você reconhece suas limitações e recomenda-se usar julgamento crítico ao considerar as sugestões apresentadas. A IA não se responsabiliza por danos, perdas ou consequências decorrentes do uso das informações fornecidas. Você também concorda em não compartilhar informações pessoais sensíveis ou confidenciais durante as interações, assegurando a privacidade e segurança dos dados. Ao continuar usando esta tecnologia, você confirma que leu, entendeu e concorda com estes termos.      
+        Ao utilizar esta inteligência artificial generativa, você aceita os seguintes termos: compromete-se a usar a IA de forma ética e responsável, evitando qualquer conteúdo que seja ofensivo, ilegal ou prejudicial a terceiros. O conteúdo gerado é de sua responsabilidade, e você deve garantir que não infringe direitos autorais ou outras leis de propriedade intelectual. Embora a IA forneça informações e respostas úteis, você reconhece suas limitações e recomenda-se usar julgamento crítico ao considerar as sugestões apresentadas. A IA não se responsabiliza por danos, perdas ou consequências decorrentes do uso das informações fornecidas. Você também concorda em não compartilhar informações pessoais sensíveis ou confidenciais durante as interações, assegurando a privacidade e segurança dos dados. Ao continuar usando esta tecnologia, você confirma que leu, entendeu e concorda com estes termos.
         </Modal>
 
       <footer className="bg-muted py-6 mt-12">
@@ -97,4 +97,4 @@ export default function EticaLandingPage() {
       </footer>
     </div>
   );
-}  
+}
