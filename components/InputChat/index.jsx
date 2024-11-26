@@ -46,7 +46,7 @@ export default function InputChat() {
           type="text"
           value={pergunta}
           onChange={(e) => setPergunta(e.target.value)}
-          placeholder="Coloque aqui a sua pergunta"
+          placeholder="Qual ação ética deseja realizar?"
           className="flex-grow"
         />
         <Button
